@@ -85,3 +85,9 @@
   </header>
   <!-- Header End -->
 </template>
+
+<script>
+export default {
+  name: "HeaderShayna",
+};
+</script>
