@@ -100,7 +100,7 @@ export default {
 
     if (localStorage.getItem("keranjangUser")) {
       try {
-        this.keranjangUser = JSON.parse(localStorage("keranjangUser"));
+        this.keranjangUser = JSON.parse(localStorage.getItem("keranjangUser"));
       } catch (e) {
         localStorage.removeItem("keranjangUser");
       }
