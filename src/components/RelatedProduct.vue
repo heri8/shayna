@@ -29,8 +29,8 @@
                 <h5>Pure Pineapple</h5>
               </a>
               <div class="product-price">
-                $14.00
-                <span>$35.00</span>
+                Rp. 150.000
+                <span>Rp. 300.000</span>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@
               <a href="#">
                 <h5>Guangzhou sweater</h5>
               </a>
-              <div class="product-price">$13.00</div>
+              <div class="product-price">Rp. 250.000</div>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
               <a href="#">
                 <h5>Pure Pineapple</h5>
               </a>
-              <div class="product-price">$34.00</div>
+              <div class="product-price">Rp. 300.000</div>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@
               <a href="#">
                 <h5>Converse Shoes</h5>
               </a>
-              <div class="product-price">$34.00</div>
+              <div class="product-price">Rp. 300.000</div>
             </div>
           </div>
         </div>

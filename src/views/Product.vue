@@ -55,7 +55,7 @@
                   </div>
                   <div class="pd-desc">
                     <p v-html="productDetails.description"></p>
-                    <h4>${{ productDetails.price }}</h4>
+                    <h4>Rp. {{ productDetails.price }}</h4>
                   </div>
                   <div class="quantity">
                     <router-link to="/cart">
@@ -142,7 +142,7 @@ export default {
       }
     }
     axios
-      .get("http://127.0.0.1:8000/api/products", {
+      .get("http://143.198.205.251/api/products", {
         params: {
           id: this.$route.params.id,
         },

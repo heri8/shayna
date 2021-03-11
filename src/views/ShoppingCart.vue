@@ -46,7 +46,7 @@
                           <h5>{{ keranjang.name }}</h5>
                         </td>
                         <td class="p-price first-row">
-                          ${{ keranjang.price }}
+                          Rp. {{ keranjang.price }}
                         </td>
                         <td class="delete-item">
                           <a href="#" @click="removeItem(keranjangUser.index)"
@@ -118,13 +118,13 @@
                       ID Transaction <span>#SH12000</span>
                     </li>
                     <li class="subtotal mt-3">
-                      Subtotal <span>${{ subTotal }}.00</span>
+                      Subtotal <span>Rp. {{ subTotal }}</span>
                     </li>
                     <li class="subtotal mt-3">
-                      Pajak <span>10% {{ pajak }}.00</span>
+                      Pajak <span>10% Rp. {{ pajak }}</span>
                     </li>
                     <li class="subtotal mt-3">
-                      Total Biaya <span>${{ totalBiaya }}.00</span>
+                      Total Biaya <span>Rp. {{ totalBiaya }}</span>
                     </li>
                     <li class="subtotal mt-3">
                       Bank Transfer <span>Mandiri</span>
@@ -191,7 +191,7 @@ export default {
       };
 
       axios
-        .post("http://127.0.0.1:8000/api/checkout", checkoutData)
+        .post("http://143.198.205.251/api/checkout", checkoutData)
         .then(() => this.$router.push("success"))
         .catch((err) => console.log(err));
     },

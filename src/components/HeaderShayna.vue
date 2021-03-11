@@ -49,12 +49,12 @@
                           </td>
                           <td class="si-text">
                             <div class="product-selected">
-                              <p>${{ keranjang.price }} x 1</p>
+                              <p>Rp. {{ keranjang.price }} x 1</p>
                               <h6>{{ keranjang.name }}</h6>
                             </div>
                           </td>
                           <td
-                            @click="removeItem(keranjangUser.index)"
+                            @click="removeItem(keranjangUser.id)"
                             class="si-close"
                           >
                             <i class="ti-close"></i>
@@ -70,7 +70,7 @@
                   </div>
                   <div class="select-total">
                     <span>total:</span>
-                    <h5>${{ totalHarga }}.00</h5>
+                    <h5>Rp. {{ totalHarga }}</h5>
                   </div>
                   <div class="select-button">
                     <a href="#" class="primary-btn view-card"
@@ -100,10 +100,19 @@ export default {
     };
   },
   methods: {
-    removeItem(index) {
+    removeItem(idx) {
+      let keranjangUserStorage = JSON.parse(
+        localStorage.getItem("keranjangUser")
+      );
+      let itemKeranjangUserStorage = keranjangUserStorage.map(
+        (itemKeranjangUserStorage) => itemKeranjangUserStorage.id
+      );
+      let index = itemKeranjangUserStorage.findIndex((id) => id == idx);
       this.keranjangUser.splice(index, 1);
+
       const parsed = JSON.stringify(this.keranjangUser);
       localStorage.setItem("keranjangUser", parsed);
+      window.location.reload();
     },
   },
   mounted() {
