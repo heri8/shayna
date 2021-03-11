@@ -94,7 +94,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://143.198.205.251/api/products/")
+      .get("http://143.198.205.251/api/products")
       .then((res) => (this.products = res.data.data.data))
       .catch((err) => console.log(err));
 

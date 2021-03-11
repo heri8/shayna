@@ -191,7 +191,7 @@ export default {
       };
 
       axios
-        .post("http://143.198.205.251/api/checkout/", checkoutData)
+        .post("http://143.198.205.251/api/checkout", checkoutData)
         .then(() => this.$router.push("success"))
         .catch((err) => console.log(err));
     },
